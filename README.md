@@ -111,9 +111,6 @@ Update `SERIAL_PORT` at the top of `enc_dec_file.py` to match your board
 
 ## Notes and caveats
 
-- All four sketches currently use `DEVICE_ADDR 0x60`. If your chip has been
-  reconfigured to a different I2C address at some point, update this
-  `#define` consistently across whichever sketch you're flashing.
 - The AES mode in use throughout is **ECB** — each 16-byte block is
   encrypted independently, with no IV or chaining. This is a limitation of
   the ATECC608B's native `AES` command in this configuration, not a bug in
